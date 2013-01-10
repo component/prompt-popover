@@ -1,0 +1,17 @@
+{
+  "name": "prompt-popover",
+  "description": "Popover prompt component",
+  "version": "0.0.1",
+  "keywords": ["prompt", "popover", "ui"],
+  "dependencies": {
+    "popover-component": "*",
+    "jquery-component": "*"
+  },
+  "component": {
+    "scripts":{
+      "prompt-popover/index.js": "index.js",
+      "prompt-popover/template.js": "template.js"
+    },
+    "styles": ["popover.css"]
+  }
+}
