@@ -1,0 +1,15 @@
+{
+  "name": "prompt-popover",
+  "description": "Popover prompt component",
+  "version": "0.0.1",
+  "keywords": ["prompt", "popover", "ui"],
+  "dependencies": {
+    "component/popover": "*",
+    "component/jquery": "*"
+  },
+  "development": {
+    "component/aurora-popover": "*"
+  },
+  "scripts": ["index.js", "template.js"],
+  "styles": ["popover.css"]
+}

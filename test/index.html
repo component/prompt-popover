@@ -1,0 +1,65 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>ConfirmationPopover</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="../build/build.css" />
+    <style>
+      body {
+        padding: 150px;
+        font: 300 14px "Helvetica Neue", Helvetica, Arial;
+        min-height: 1000px;
+      }
+      a {
+        display: inline-block;
+        float: left;
+        border: 1px solid #eee;
+        padding: 10px;
+        color: black;
+        text-decoration: none;
+        margin: 55px;
+        width: 100px;
+        text-align: center;
+      }
+      input {
+        padding: 5px;
+      }
+      .popover input {
+        outline: none;
+      }
+      .popover .tip-inner {
+        border: 1px solid #ddd;
+      }
+      .popover:first-of-type .cancel {
+        display: none;
+      }
+      .popover:first-of-type .ok {
+        position: absolute;
+        top: 11px;
+        right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <title>Prompt</title>
+    <script src="../build/build.js"></script>
+    <a href="#" id="auto">Foo</a>
+    <a href="#" id="auto-title">Bar</a>
+    <script>
+      var o = require('component-jquery');
+      var Popover = require('prompt-popover');
+      require('component-popover').effect = 'fade';
+
+      var confirm = new Popover;
+      confirm.show('#auto', function(val){
+        console.log(val);
+      });
+
+      var confirm = new Popover('Password');
+      confirm.ok('Save');
+      confirm.show('#auto-title', function(val){
+        console.log(val);
+      });
+    </script>
+  </body>
+</html>
